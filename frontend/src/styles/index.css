@@ -1,0 +1,225 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.25s ease;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #111c2d;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/*  */
+.back-drop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.25s ease-in-out;
+  z-index: 1020;
+  opacity: 0;
+  filter: opacity(0);
+  visibility: hidden;
+}
+
+.open {
+  opacity: 1;
+  filter: opacity(1);
+  visibility: visible;
+}
+
+.bg-color-1 {
+  background-color: #f3f3f3;
+}
+
+.bg-color-2 {
+  background-color: #f8f9fa;
+}
+
+.color-main {
+  color: #54ba3c;
+}
+
+.bg-main {
+  background-color: #54ba3c;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 1.7rem + 2px);
+  padding: 0.85rem 1.25rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #f5f5f5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+.wrp-effect-color:hover {
+  color: #54ba3c;
+}
+
+.wrp-effect-scale:hover img {
+  transform: scale(1.05);
+}
+
+.wrp-effect-boxshadow:hover {
+  /* box-shadow: 0px 0p; */
+}
+
+.inner-image{
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.inner-image img {
+  transition: all 0.4s ease-in-out;
+}
+
+/* custom swiper */
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #acbec8; 
+  width: 16px;
+  height: 16px; 
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color: #54ba3c; 
+}
+
+.swiper-pagination-bullet {
+  width: 12px; 
+  height: 12px; 
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #54ba3c; 
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
+    opacity: 1; 
+}
+
+.swiper-navigation-custom .swiper-button-prev,
+.swiper-navigation-custom .swiper-button-next {
+    opacity: 1; 
+    transition: opacity 0.3s ease; 
+}
+
+.swiper-navigation-custom .swiper-button-prev, .swiper-navigation-custom .swiper-button-next {
+  position: inherit;
+  width: 3rem;
+  height: 3rem;
+  background-color: #262627;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev i, .swiper-button-next i {
+  color: #fff;
+}
+
+.swiper-navigation-custom .swiper-button-prev:hover, .swiper-navigation-custom .swiper-button-next:hover {
+  background-color: #54ba3c;
+}
+
+.swiper-navigation-custom .swiper-button-prev:after, .swiper-navigation-custom .swiper-button-next:after {
+  content: "";
+}
+
+.swiper-navigation-custom .swiper-button-prev.swiper-button-disabled, .swiper-navigation-custom .swiper-button-next.swiper-button-disabled {
+  opacity: 0.35;
+}
+
+.swiper-navigation {
+  display: flex;
+  gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+/* end swiper */
+
+.ratio-16-9 {
+  padding-top: 56.25%;
+  position: relative;
+}
+.ratio-1-1 {
+  padding-top: 100%;
+  position: relative;
+}
+
+.ratio-3-2 {
+  padding-top: 66.66%;
+  position: relative;
+}
+
+/* .inner-image {
+  padding-top: 100%;
+  position: relative;
+} */
+
+.ratio-1-1 img, .ratio-16-9 img, .ratio-3-2 img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
